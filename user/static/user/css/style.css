@@ -1,0 +1,83 @@
+/* Шрифты */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Стили для навигационного меню */
+nav {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav .user-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav .user-info p {
+    margin-right: 10px;
+}
+
+/* Стили для основного содержимого */
+main {
+    padding: 20px;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.post h2 {
+    margin-top: 0;
+}
+
+.post p {
+    margin-bottom: 10px;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

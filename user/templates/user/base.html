@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'user/css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="user-info">
+            {% if user.is_authenticated %}
+                <p>Привет, {{ user.username }}!</p>
+                <a href="{% url 'logout' %}">Выйти</a>
+            {% else %}
+                <a href="{% url 'login' %}">Войти</a>
+                <a href="{% url 'register' %}">Зарегистрироваться</a>
+            {% endif %}
+        </div>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
